@@ -4,76 +4,12 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 /* ═══════════════════════════════════
-   LANGUAGE TOGGLE
-═══════════════════════════════════ */
-const html = document.documentElement;
-const langToggle = document.getElementById("langToggle");
-
-// Translation data for typewriter
-const translations = {
-  en: [
-    "Full Stack Engineer",
-    "Python Backend Developer",
-    "AI & ML Enthusiast",
-    "Flask Specialist",
-    "LLM Integrator",
-    "Software Engineering Student",
-    "Problem Solver",
-  ],
-  ar: [
-    "مهندس Full Stack",
-    "مطور Python خلفي",
-    "متحمس للذكاء الاصطناعي",
-    "متخصص Flask",
-    "مدمج نماذج اللغة الكبيرة",
-    "طالب هندسة برمجيات",
-    "حلّال مشاكل",
-  ]
-};
-
-// Load saved language preference
-let currentLang = localStorage.getItem("lang") || "en";
-html.setAttribute("lang", currentLang);
-html.setAttribute("dir", currentLang === "ar" ? "rtl" : "ltr");
-
-// Function to update all translatable elements
-function updateLanguage(lang) {
-  // Update all elements with data-en and data-ar attributes
-  document.querySelectorAll("[data-en][data-ar]").forEach(el => {
-    const text = lang === "en" ? el.getAttribute("data-en") : el.getAttribute("data-ar");
-    el.textContent = text;
-  });
-
-  // Update HTML attributes
-  html.setAttribute("lang", lang);
-  html.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
-
-  // Restart typewriter with new language
-  currentLang = lang;
-  phraseIndex = 0;
-  charIndex = 0;
-  deleting = false;
-  clearTimeout(pauseTimer);
-  typeLoop();
-}
-
-// Apply initial language
-updateLanguage(currentLang);
-
-// Language toggle event
-langToggle.addEventListener("click", () => {
-  const newLang = currentLang === "en" ? "ar" : "en";
-  currentLang = newLang;
-  localStorage.setItem("lang", newLang);
-  updateLanguage(newLang);
-});
-
-/* ═══════════════════════════════════
    DARK / LIGHT MODE
 ═══════════════════════════════════ */
+const html = document.documentElement;
 const themeToggle = document.getElementById("themeToggle");
 
-// Load saved theme preference
+// Load saved preference
 const savedTheme = localStorage.getItem("theme") || "dark";
 html.setAttribute("data-theme", savedTheme);
 
@@ -118,6 +54,16 @@ document.querySelectorAll("a, button, .project-card, .skill-col, .contact-item")
 /* ═══════════════════════════════════
    TYPEWRITER
 ═══════════════════════════════════ */
+const phrases = [
+  "Full Stack Engineer",
+  "Python Backend Developer",
+  "AI & ML Enthusiast",
+  "Flask Specialist",
+  "LLMs Integrator",
+  "Software Engineering Student",
+  "Problem Solver",
+];
+
 const twEl = document.getElementById("twText");
 let phraseIndex = 0;
 let charIndex = 0;
@@ -125,9 +71,7 @@ let deleting = false;
 let pauseTimer = null;
 
 function typeLoop() {
-  const phrases = translations[currentLang];
   const current = phrases[phraseIndex];
-  
   if (!deleting) {
     charIndex++;
     twEl.textContent = current.slice(0, charIndex);
@@ -162,7 +106,6 @@ menuBtn.addEventListener("click", () => {
   mobileMenu.style.display = isOpen ? "none" : "flex";
   menuBtn.setAttribute("aria-expanded", String(!isOpen));
 });
-
 mobileMenu.querySelectorAll("a").forEach(a => {
   a.addEventListener("click", () => {
     mobileMenu.style.display = "none";
