@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ahmed Gamel | Full Stack & AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,16 +22,17 @@
         <span class="brand-bracket">[</span>AG<span class="brand-bracket">]</span>
       </a>
       <nav class="links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-key="nav_about">About</a>
+        <a href="#projects" data-key="nav_projects">Projects</a>
+        <a href="#skills" data-key="nav_skills">Skills</a>
+        <a href="#contact" data-key="nav_contact">Contact</a>
       </nav>
       <div class="nav-actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">العربية</button>
         <a class="btn btn-ghost" target="_blank" rel="noreferrer" href="https://github.com/a7aml">GitHub</a>
       </div>
       <button class="menu-btn" aria-label="Open menu" id="menuBtn">
@@ -39,10 +40,10 @@
       </button>
     </div>
     <div class="mobile-menu container" id="mobileMenu">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-key="nav_about">About</a>
+      <a href="#projects" data-key="nav_projects">Projects</a>
+      <a href="#skills" data-key="nav_skills">Skills</a>
+      <a href="#contact" data-key="nav_contact">Contact</a>
     </div>
   </header>
 
@@ -53,26 +54,25 @@
       <div class="hero-text">
         <div class="hero-tag stagger-1">
           <span class="tag-dot"></span>
-          Available for hire
+          <span data-key="hero_tag">Available for hire</span>
         </div>
 
         <h1 class="hero-h1 stagger-2">
-          Hi, I'm<br>
+          <span data-key="hero_greeting">Hi, I'm</span><br>
           <span class="hero-name">Ahmed Gamel</span>
         </h1>
 
         <div class="typewriter-wrap stagger-3">
-          <span class="tw-prefix">And I'm a </span><span class="tw-text" id="twText"></span><span class="tw-cursor">|</span>
+          <span class="tw-prefix" data-key="type_prefix">And I'm a </span><span class="tw-text" id="twText"></span><span class="tw-cursor">|</span>
         </div>
 
-        <p class="hero-sub stagger-4">
-          Building AI-powered web systems that solve real problems —
-          from automation platforms to full-stack Flask applications.
+        <p class="hero-sub stagger-4" data-key="hero_sub">
+          Final-year Software Engineering student at UTeM (CGPA 3.84/4.00). Specializing in Full-Stack development and AI-powered systems — from automation platforms to intelligent LLM integration.
         </p>
 
         <div class="hero-cta stagger-5">
-          <a class="btn btn-primary" href="#projects">View My Work</a>
-          <a class="btn btn-outline" href="#contact">Contact Me</a>
+          <a class="btn btn-primary" href="#projects" data-key="cta_work">View My Work</a>
+          <a class="btn btn-outline" href="#contact" data-key="cta_contact">Contact Me</a>
         </div>
 
         <div class="hero-socials stagger-6">
@@ -96,19 +96,19 @@
           <div class="photo-overlay"></div>
         </div>
         <div class="photo-stat ps-1">
-          <span class="ps-num">3.85</span>
-          <span class="ps-label">GPA</span>
+          <span class="ps-num">3.84</span>
+          <span class="ps-label" data-key="stat_gpa">CGPA</span>
         </div>
         <div class="photo-stat ps-2">
-          <span class="ps-num">4+</span>
-          <span class="ps-label">Projects</span>
+          <span class="ps-num">5+</span>
+          <span class="ps-label" data-key="stat_projects">Projects</span>
         </div>
       </div>
 
     </div>
     <div class="scroll-hint">
       <div class="scroll-line"></div>
-      <span>Scroll</span>
+      <span data-key="scroll">Scroll</span>
     </div>
   </section>
 
@@ -116,149 +116,181 @@
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <p class="section-label reveal">About</p>
+      <p class="section-label reveal" data-key="about_label">About</p>
       <div class="about-grid">
         <div class="about-text reveal">
-          <h2 class="section-h2">Crafting software<br><em>with purpose.</em></h2>
-          <p>Final-year Software Engineering student at Universiti Teknikal Malaysia Melaka (UTeM), specializing in Flask backend systems and integrating AI into real web products. I've shipped live production systems — including an automation platform for a real company in Malacca.</p>
-          <p>My approach combines clean backend architecture with thoughtful AI integration — building systems that are fast, maintainable, and genuinely useful.</p>
+          <h2 class="section-h2" data-key="about_head">Final-year Software Engineering<br><em>with 3.84 CGPA.</em></h2>
+          <p data-key="about_p1">Final-year Software Engineering student at Universiti Teknikal Malaysia Melaka (UTeM) with CGPA 3.84/4.00 (First Class Honours). Specialized in Full-Stack development, AI integration, and building intelligent automation systems for real business problems.</p>
+          <p data-key="about_p2">Proven ability to deliver innovative tech solutions — process automation, data analytics, and management systems that improve efficiency and reduce costs. Fast learner with leadership experience from hackathons. Passionate about digital transformation aligned with Saudi Vision 2030.</p>
           <div class="about-badges">
-            <span class="abadge">UTeM 2024–2027</span>
-            <span class="abadge">Malacca, Malaysia</span>
-            <span class="abadge">Open to Remote</span>
+            <span class="abadge" data-key="badge_1">UTeM 2024–2027</span>
+            <span class="abadge" data-key="badge_2">Melaka, Malaysia</span>
+            <span class="abadge" data-key="badge_3">Open to Remote</span>
           </div>
         </div>
         <div class="about-numbers reveal">
           <div class="an-item">
-            <span class="an-num" data-count="3.85" data-decimal="true">0</span>
-            <span class="an-label">GPA</span>
+            <span class="an-num" data-count="3.84" data-decimal="true">0</span>
+            <span class="an-label" data-key="stat_gpa_label">CGPA</span>
           </div>
           <div class="an-divider"></div>
           <div class="an-item">
-            <span class="an-num" data-count="4">0</span>
-            <span class="an-label">Real Projects</span>
+            <span class="an-num" data-count="5">0</span>
+            <span class="an-label" data-key="stat_projects_label">Real Projects</span>
           </div>
           <div class="an-divider"></div>
           <div class="an-item">
             <span class="an-num" data-count="2">0</span>
-            <span class="an-label">Languages</span>
+            <span class="an-label" data-key="stat_lang_label">Languages</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS - UPDATED FROM CV TEXT -->
     <section id="projects" class="section">
-      <p class="section-label reveal">Work</p>
-      <h2 class="section-h2 reveal">Featured Projects</h2>
-      <p class="section-sub reveal">Real-world systems built and shipped.</p>
+      <p class="section-label reveal" data-key="work_label">Projects</p>
+      <h2 class="section-h2 reveal" data-key="projects_head">Featured Work</h2>
+      <p class="section-sub reveal" data-key="projects_sub">Real-world systems built and shipped — from hackathons to production.</p>
 
       <div class="projects-list">
 
+        <!-- Project 1: ClickCV (FYP) -->
         <article class="project-card reveal">
           <div class="pc-left">
             <div class="pc-num">01</div>
             <div class="pc-tags">
-              <span>Flask</span><span>React</span><span>AI</span><span>Supabase</span>
+              <span>LLM</span><span>Flask</span><span>PostgreSQL</span><span>AI</span>
             </div>
           </div>
           <div class="pc-body">
-            <p class="pc-cat">AI + Web Integration</p>
-            <h3 class="pc-title">iPETRO Digital Inspection System</h3>
-            <p class="pc-desc">A web-based inspection and reporting system built for a real company in Malacca. Automates operational workflows with AI assistance, production-deployed with authentication and real-time data handling.</p>
-            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ipetro-digital-inspection-system" target="_blank" rel="noreferrer">View on GitHub</a>
+            <p class="pc-cat" data-key="proj1_cat">FYP · Full Stack + AI Algorithms</p>
+            <h3 class="pc-title" data-key="proj1_title">ClickCV — AI Resume Analyzer</h3>
+            <p class="pc-desc" data-key="proj1_desc">Intelligent platform for resume analysis and optimization. Uses LLM algorithms to evaluate ATS compatibility and generate smart improvement recommendations. Integrated pre-trained models with custom resume-scoring logic, plus an intelligent job search engine matching user skills with relevant opportunities. Built with PostgreSQL for high-performance data management and interactive frontend.</p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ClickCv" target="_blank" rel="noreferrer" data-key="github_btn">View on GitHub</a>
           </div>
         </article>
 
+        <!-- Project 2: Manarah - Salamhack Hackathon -->
         <article class="project-card reveal">
           <div class="pc-left">
             <div class="pc-num">02</div>
             <div class="pc-tags">
-              <span>C++</span><span>MySQL</span><span>OOP</span>
+              <span>Flask</span><span>Next.js</span><span>AI Agent</span><span>JWT</span>
             </div>
           </div>
           <div class="pc-body">
-            <p class="pc-cat">Systems & Performance</p>
-            <h3 class="pc-title">Melaka Property Management System</h3>
-            <p class="pc-desc">A full property management system in C++ with MySQL storage. Handles property records, tenant management, and operational data with clean OOP architecture and efficient data structures.</p>
-            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/Melaka-property-management-system---C-" target="_blank" rel="noreferrer">View on GitHub</a>
+            <p class="pc-cat" data-key="proj2_cat">Hackathon · Team Leader (3 days)</p>
+            <h3 class="pc-title" data-key="proj2_title">Manarah — Smart Personal Finance System</h3>
+            <p class="pc-desc" data-key="proj2_desc">Led a technical team at Salamhack Hackathon to build an intelligent finance system in 3 days. Developed an AI Agent (Python/Flask) providing Sharia-compliant financial advice. Automated expenses and payments with smart savings allocation. Built fast Next.js UI, automated Zakat calculation, and halal investment suggestions with bank account integration. Implemented security standards (JWT, encryption) for sensitive financial data.</p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/Manarah" target="_blank" rel="noreferrer" data-key="github_btn">View on GitHub</a>
           </div>
         </article>
 
+        <!-- Project 3: iPetro - Company Automation System -->
         <article class="project-card reveal">
           <div class="pc-left">
             <div class="pc-num">03</div>
             <div class="pc-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              <span>Flask</span><span>JavaScript</span><span>Automation</span>
             </div>
           </div>
           <div class="pc-body">
-            <p class="pc-cat">E-Commerce</p>
-            <h3 class="pc-title">Dyscover Game Hub</h3>
-            <p class="pc-desc">An e-commerce platform for buying and selling games online. Features product listings, cart functionality, user interactions, and a fully responsive UI designed for seamless browsing across devices.</p>
-            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/dyscover-game-hub" target="_blank" rel="noreferrer">View on GitHub</a>
+            <p class="pc-cat" data-key="proj3_cat">Industry Project · iPetro, Melaka</p>
+            <h3 class="pc-title" data-key="proj3_title">iPetro Equipment Reporting Automation</h3>
+            <p class="pc-desc" data-key="proj3_desc">End-to-end web system automating technical and administrative equipment report generation. Reduced report preparation time from hours to minutes — saving significant company resources. Built interactive, user-friendly interfaces enabling non-technical staff to generate reports effortlessly. Applied responsive design principles for cross-device compatibility.</p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ipetro-digital-inspection-system" target="_blank" rel="noreferrer" data-key="github_btn">View on GitHub</a>
           </div>
         </article>
 
+        <!-- Project 4: ARROW - Smart University LMS Assistant -->
         <article class="project-card reveal">
           <div class="pc-left">
             <div class="pc-num">04</div>
             <div class="pc-tags">
-              <span>AI</span><span>HTML</span><span>Resume</span>
+              <span>FastAPI</span><span>Web Scraping</span><span>Telegram</span><span>WhatsApp</span>
             </div>
           </div>
           <div class="pc-body">
-            <p class="pc-cat">AI Tool</p>
-            <h3 class="pc-title">ClickCV — AI Resume Analyzer</h3>
-            <p class="pc-desc">An AI-powered resume analysis and optimization platform. Analyzes CVs for ATS compatibility, suggests targeted improvements, and helps candidates present their experience more effectively to recruiters.</p>
-            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ClickCv" target="_blank" rel="noreferrer">View on GitHub</a>
+            <p class="pc-cat" data-key="proj4_cat">Backend Integration · Personal Project</p>
+            <h3 class="pc-title" data-key="proj4_title">ARROW — Smart University LMS Assistant</h3>
+            <p class="pc-desc" data-key="proj4_desc">Intelligent integration system connecting university LMS with messaging apps using FastAPI. Built smart notification system sending automatic exam/event alerts via Telegram and WhatsApp. Applied web scraping techniques to extract academic data systematically. Integrated with Telegram Bot API and WhatsApp Business API for real-time information delivery. Developed smart chatbot answering student queries by fetching live data from university platform.</p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ARROW" target="_blank" rel="noreferrer" data-key="github_btn">View on GitHub</a>
           </div>
         </article>
 
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS - COMPLETELY UPDATED FROM CV TEXT -->
     <section id="skills" class="section">
-      <p class="section-label reveal">Stack</p>
-      <h2 class="section-h2 reveal">Skills</h2>
+      <p class="section-label reveal" data-key="stack_label">Tech Stack</p>
+      <h2 class="section-h2 reveal" data-key="skills_head">Skills & Expertise</h2>
       <div class="skills-grid">
+        <!-- Programming Languages -->
         <div class="skill-col reveal">
-          <div class="skill-col-head">Backend</div>
+          <div class="skill-col-head" data-key="skill_langs">Languages</div>
           <ul class="skill-list">
-            <li><div class="sk-row"><span>Flask</span><span class="sk-pct">92%</span></div><div class="sk-track"><div class="sk-bar" style="--w:92%"></div></div></li>
-            <li><div class="sk-row"><span>REST APIs</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
-            <li><div class="sk-row"><span>Auth — JWT / Sessions</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
-            <li><div class="sk-row"><span>SQL / PostgreSQL</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-bar" style="--w:78%"></div></div></li>
-            <li><div class="sk-row"><span>Docker</span><span class="sk-pct">65%</span></div><div class="sk-track"><div class="sk-bar" style="--w:65%"></div></div></li>
+            <li><div class="sk-row"><span>Python</span><span class="sk-pct">92%</span></div><div class="sk-track"><div class="sk-bar" style="--w:92%"></div></div></li>
+            <li><div class="sk-row"><span>JavaScript / TypeScript</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
+            <li><div class="sk-row"><span>SQL</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+            <li><div class="sk-row"><span>HTML5 / CSS3</span><span class="sk-pct">90%</span></div><div class="sk-track"><div class="sk-bar" style="--w:90%"></div></div></li>
+          </ul>
+        </div>
+        <!-- Frontend Development -->
+        <div class="skill-col reveal">
+          <div class="skill-col-head" data-key="skill_frontend">Frontend</div>
+          <ul class="skill-list">
+            <li><div class="sk-row"><span>React.js / Next.js</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+            <li><div class="sk-row"><span>Tailwind CSS</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
+            <li><div class="sk-row"><span>Responsive UI</span><span class="sk-pct">90%</span></div><div class="sk-track"><div class="sk-bar" style="--w:90%"></div></div></li>
+          </ul>
+        </div>
+        <!-- Backend & Databases -->
+        <div class="skill-col reveal">
+          <div class="skill-col-head" data-key="skill_backend">Backend & DB</div>
+          <ul class="skill-list">
+            <li><div class="sk-row"><span>Flask / FastAPI</span><span class="sk-pct">92%</span></div><div class="sk-track"><div class="sk-bar" style="--w:92%"></div></div></li>
+            <li><div class="sk-row"><span>Node.js / RESTful APIs</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+            <li><div class="sk-row"><span>PostgreSQL / MongoDB</span><span class="sk-pct">86%</span></div><div class="sk-track"><div class="sk-bar" style="--w:86%"></div></div></li>
+            <li><div class="sk-row"><span>Query Optimization</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
+          </ul>
+        </div>
+        <!-- AI & Advanced Concepts -->
+        <div class="skill-col reveal">
+          <div class="skill-col-head" data-key="skill_ai">AI & Advanced</div>
+          <ul class="skill-list">
+            <li><div class="sk-row"><span>LLMs / AI Agents</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
+            <li><div class="sk-row"><span>Pre-trained Models</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-bar" style="--w:82%"></div></div></li>
+            <li><div class="sk-row"><span>Docker / CI/CD</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-bar" style="--w:75%"></div></div></li>
+            <li><div class="sk-row"><span>Web Scraping / Automation</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Additional skills row: DevOps, Security, Testing -->
+      <div class="skills-grid" style="margin-top: 1.5rem;">
+        <div class="skill-col reveal">
+          <div class="skill-col-head">DevOps & Tools</div>
+          <ul class="skill-list">
+            <li><div class="sk-row"><span>Git / GitHub</span><span class="sk-pct">90%</span></div><div class="sk-track"><div class="sk-bar" style="--w:90%"></div></div></li>
+            <li><div class="sk-row"><span>Docker / AWS Lambda</span><span class="sk-pct">72%</span></div><div class="sk-track"><div class="sk-bar" style="--w:72%"></div></div></li>
+            <li><div class="sk-row"><span>CI/CD Pipelines</span><span class="sk-pct">68%</span></div><div class="sk-track"><div class="sk-bar" style="--w:68%"></div></div></li>
           </ul>
         </div>
         <div class="skill-col reveal">
-          <div class="skill-col-head">AI / ML</div>
+          <div class="skill-col-head">Security & Best Practices</div>
           <ul class="skill-list">
-            <li><div class="sk-row"><span>Fine-tuning LLMs</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
-            <li><div class="sk-row"><span>Model Integration</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-bar" style="--w:82%"></div></div></li>
-            <li><div class="sk-row"><span>Hugging Face</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-bar" style="--w:78%"></div></div></li>
-            <li><div class="sk-row"><span>Inference Pipelines</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-bar" style="--w:75%"></div></div></li>
-            <li><div class="sk-row"><span>LLM APIs</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
+            <li><div class="sk-row"><span>JWT / Encryption</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+            <li><div class="sk-row"><span>System Design Principles</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-bar" style="--w:78%"></div></div></li>
+            <li><div class="sk-row"><span>Unit Testing (Pytest)</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
           </ul>
         </div>
         <div class="skill-col reveal">
-          <div class="skill-col-head">Frontend</div>
+          <div class="skill-col-head">Soft Skills</div>
           <ul class="skill-list">
-            <li><div class="sk-row"><span>HTML / CSS / JS</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
-            <li><div class="sk-row"><span>React</span><span class="sk-pct">72%</span></div><div class="sk-track"><div class="sk-bar" style="--w:72%"></div></div></li>
-            <li><div class="sk-row"><span>Responsive UI</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
-            <li><div class="sk-row"><span>Animations</span><span class="sk-pct">74%</span></div><div class="sk-track"><div class="sk-bar" style="--w:74%"></div></div></li>
-          </ul>
-        </div>
-        <div class="skill-col reveal">
-          <div class="skill-col-head">Systems</div>
-          <ul class="skill-list">
-            <li><div class="sk-row"><span>C++</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
-            <li><div class="sk-row"><span>Java</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-bar" style="--w:75%"></div></div></li>
-            <li><div class="sk-row"><span>Data Structures</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-bar" style="--w:82%"></div></div></li>
-            <li><div class="sk-row"><span>System Design</span><span class="sk-pct">70%</span></div><div class="sk-track"><div class="sk-bar" style="--w:70%"></div></div></li>
+            <li><div class="sk-row"><span>Leadership & Team Management</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
+            <li><div class="sk-row"><span>Problem Solving</span><span class="sk-pct">90%</span></div><div class="sk-track"><div class="sk-bar" style="--w:90%"></div></div></li>
+            <li><div class="sk-row"><span>Fast Learning & Adaptability</span><span class="sk-pct">92%</span></div><div class="sk-track"><div class="sk-bar" style="--w:92%"></div></div></li>
           </ul>
         </div>
       </div>
@@ -266,23 +298,23 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <p class="section-label reveal">Contact</p>
+      <p class="section-label reveal" data-key="contact_label">Contact</p>
       <div class="contact-wrap reveal">
-        <h2 class="section-h2">Let's build<br><em>something together.</em></h2>
-        <p class="section-sub">Open to full-time roles, freelance projects, and interesting collaborations.</p>
+        <h2 class="section-h2" data-key="contact_head">Let's build<br><em>something together.</em></h2>
+        <p class="section-sub" data-key="contact_sub">Open to full-time roles, freelance projects, and interesting collaborations.</p>
         <div class="contact-links">
           <a href="mailto:ahmedgamej@gmail.com" class="contact-item">
-            <span class="ci-label">Email</span>
+            <span class="ci-label" data-key="contact_email_label">Email</span>
             <span class="ci-value">ahmedgamej@gmail.com</span>
             <span class="ci-arrow">→</span>
           </a>
           <a href="https://linkedin.com/in/ahmed-gamel-33a0b8361" target="_blank" rel="noreferrer" class="contact-item">
-            <span class="ci-label">LinkedIn</span>
+            <span class="ci-label" data-key="contact_linkedin_label">LinkedIn</span>
             <span class="ci-value">ahmed-gamel-33a0b8361</span>
             <span class="ci-arrow">→</span>
           </a>
           <a href="https://github.com/a7aml" target="_blank" rel="noreferrer" class="contact-item">
-            <span class="ci-label">GitHub</span>
+            <span class="ci-label" data-key="contact_github_label">GitHub</span>
             <span class="ci-value">github.com/a7aml</span>
             <span class="ci-arrow">→</span>
           </a>
@@ -292,7 +324,7 @@
 
     <footer class="footer">
       <span>© <span id="year"></span> Ahmed Gamel</span>
-      <span>Built with HTML / CSS / JS</span>
+      <span data-key="footer_built">Built with HTML / CSS / JS</span>
     </footer>
   </main>
 
