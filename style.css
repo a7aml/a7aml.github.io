@@ -712,3 +712,40 @@ body {
   .pc-body { padding-left: 0; }
   .pc-num { font-size: 11px; }
 }
+
+/* ═══════════════════════════════════════════
+   LANGUAGE TOGGLE BUTTON (Minimal)
+═══════════════════════════════════════════ */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  height: 36px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text2);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  background: var(--card-hov);
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.lang-toggle:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+/* RTL support */
+[dir="rtl"] .lang-toggle {
+  font-family: 'Instrument Sans', system-ui, sans-serif;
+}
