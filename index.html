@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ahmed Gamel | Full Stack & AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -22,12 +22,15 @@
         <span class="brand-bracket">[</span>AG<span class="brand-bracket">]</span>
       </a>
       <nav class="links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-en="About" data-ar="نبذة">About</a>
+        <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
+        <a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a>
+        <a href="#contact" data-en="Contact" data-ar="التواصل">Contact</a>
       </nav>
       <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-text" data-en="عربي" data-ar="EN">عربي</span>
+        </button>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -39,10 +42,10 @@
       </button>
     </div>
     <div class="mobile-menu container" id="mobileMenu">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-en="About" data-ar="نبذة">About</a>
+      <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
+      <a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a>
+      <a href="#contact" data-en="Contact" data-ar="التواصل">Contact</a>
     </div>
   </header>
 
@@ -53,26 +56,25 @@
       <div class="hero-text">
         <div class="hero-tag stagger-1">
           <span class="tag-dot"></span>
-          Available for hire
+          <span data-en="Available for hire" data-ar="متاح للتوظيف">Available for hire</span>
         </div>
 
         <h1 class="hero-h1 stagger-2">
-          Hi, I'm<br>
+          <span data-en="Hi, I'm" data-ar="مرحباً، أنا">Hi, I'm</span><br>
           <span class="hero-name">Ahmed Gamel</span>
         </h1>
 
         <div class="typewriter-wrap stagger-3">
-          <span class="tw-prefix">And I'm a </span><span class="tw-text" id="twText"></span><span class="tw-cursor">|</span>
+          <span class="tw-prefix" data-en="And I'm a " data-ar="و أنا ">And I'm a </span><span class="tw-text" id="twText"></span><span class="tw-cursor">|</span>
         </div>
 
-        <p class="hero-sub stagger-4">
-          Building AI-powered web systems that solve real problems —
-          from automation platforms to full-stack Flask applications.
+        <p class="hero-sub stagger-4" data-en="Final-year Software Engineering student specializing in building AI-powered web systems and full-stack applications. Experienced in automating business workflows and creating intelligent solutions that drive efficiency." data-ar="طالب هندسة برمجيات في السنة النهائية، متخصص في تطوير أنظمة الويب المدعومة بالذكاء الاصطناعي والتطبيقات الكاملة. خبرة في أتمتة سير العمل التجاري وإنشاء حلول ذكية تحسّن الكفاءة.">
+          Final-year Software Engineering student specializing in building AI-powered web systems and full-stack applications. Experienced in automating business workflows and creating intelligent solutions that drive efficiency.
         </p>
 
         <div class="hero-cta stagger-5">
-          <a class="btn btn-primary" href="#projects">View My Work</a>
-          <a class="btn btn-outline" href="#contact">Contact Me</a>
+          <a class="btn btn-primary" href="#projects" data-en="View My Work" data-ar="أعمالي">View My Work</a>
+          <a class="btn btn-outline" href="#contact" data-en="Contact Me" data-ar="تواصل معي">Contact Me</a>
         </div>
 
         <div class="hero-socials stagger-6">
@@ -88,7 +90,7 @@
         </div>
       </div>
 
-      <!-- RIGHT PHOTO — full-height style like reference -->
+      <!-- RIGHT PHOTO -->
       <div class="hero-photo stagger-2">
         <div class="photo-backdrop"></div>
         <div class="photo-wrap">
@@ -96,19 +98,19 @@
           <div class="photo-overlay"></div>
         </div>
         <div class="photo-stat ps-1">
-          <span class="ps-num">3.85</span>
-          <span class="ps-label">GPA</span>
+          <span class="ps-num">3.84</span>
+          <span class="ps-label" data-en="GPA" data-ar="المعدل">GPA</span>
         </div>
         <div class="photo-stat ps-2">
-          <span class="ps-num">4+</span>
-          <span class="ps-label">Projects</span>
+          <span class="ps-num">5+</span>
+          <span class="ps-label" data-en="Projects" data-ar="مشاريع">Projects</span>
         </div>
       </div>
 
     </div>
     <div class="scroll-hint">
       <div class="scroll-line"></div>
-      <span>Scroll</span>
+      <span data-en="Scroll" data-ar="تصفح">Scroll</span>
     </div>
   </section>
 
@@ -116,32 +118,39 @@
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <p class="section-label reveal">About</p>
+      <p class="section-label reveal" data-en="About" data-ar="نبذة">About</p>
       <div class="about-grid">
         <div class="about-text reveal">
-          <h2 class="section-h2">Crafting software<br><em>with purpose.</em></h2>
-          <p>Final-year Software Engineering student at Universiti Teknikal Malaysia Melaka (UTeM), specializing in Flask backend systems and integrating AI into real web products. I've shipped live production systems — including an automation platform for a real company in Malacca.</p>
-          <p>My approach combines clean backend architecture with thoughtful AI integration — building systems that are fast, maintainable, and genuinely useful.</p>
+          <h2 class="section-h2">
+            <span data-en="Crafting software" data-ar="صناعة البرمجيات">Crafting software</span><br>
+            <em data-en="with purpose." data-ar="بهدف واضح.">with purpose.</em>
+          </h2>
+          <p data-en="Final-year Software Engineering student at Universiti Teknikal Malaysia Melaka (UTeM) with a 3.84 GPA, specializing in Flask backend systems and AI integration. I've built production systems for real companies, including an automation platform for iPetro in Malacca." data-ar="طالب هندسة برمجيات في السنة النهائية بجامعة التكنولوجيا الماليزية (UTeM) بمعدل 3.84، متخصص في أنظمة Flask الخلفية ودمج الذكاء الاصطناعي. قمت ببناء أنظمة إنتاجية لشركات حقيقية، بما في ذلك منصة أتمتة لشركة iPetro في مالاكا.">
+            Final-year Software Engineering student at Universiti Teknikal Malaysia Melaka (UTeM) with a 3.84 GPA, specializing in Flask backend systems and AI integration. I've built production systems for real companies, including an automation platform for iPetro in Malacca.
+          </p>
+          <p data-en="My approach combines clean architecture with practical AI implementation — building systems that are maintainable, scalable, and genuinely solve real business problems." data-ar="منهجي يجمع بين البنية النظيفة والتطبيق العملي للذكاء الاصطناعي — بناء أنظمة قابلة للصيانة والتوسع وتحل مشاكل الأعمال الحقيقية.">
+            My approach combines clean architecture with practical AI implementation — building systems that are maintainable, scalable, and genuinely solve real business problems.
+          </p>
           <div class="about-badges">
             <span class="abadge">UTeM 2024–2027</span>
-            <span class="abadge">Malacca, Malaysia</span>
-            <span class="abadge">Open to Remote</span>
+            <span class="abadge" data-en="Malacca, Malaysia" data-ar="مالاكا، ماليزيا">Malacca, Malaysia</span>
+            <span class="abadge" data-en="Open to Remote" data-ar="متاح للعمل عن بعد">Open to Remote</span>
           </div>
         </div>
         <div class="about-numbers reveal">
           <div class="an-item">
-            <span class="an-num" data-count="3.85" data-decimal="true">0</span>
-            <span class="an-label">GPA</span>
+            <span class="an-num" data-count="3.84" data-decimal="true">0</span>
+            <span class="an-label" data-en="GPA" data-ar="المعدل">GPA</span>
           </div>
           <div class="an-divider"></div>
           <div class="an-item">
-            <span class="an-num" data-count="4">0</span>
-            <span class="an-label">Real Projects</span>
+            <span class="an-num" data-count="5">0</span>
+            <span class="an-label" data-en="Real Projects" data-ar="مشاريع حقيقية">Real Projects</span>
           </div>
           <div class="an-divider"></div>
           <div class="an-item">
             <span class="an-num" data-count="2">0</span>
-            <span class="an-label">Languages</span>
+            <span class="an-label" data-en="Languages" data-ar="لغات">Languages</span>
           </div>
         </div>
       </div>
@@ -149,9 +158,9 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <p class="section-label reveal">Work</p>
-      <h2 class="section-h2 reveal">Featured Projects</h2>
-      <p class="section-sub reveal">Real-world systems built and shipped.</p>
+      <p class="section-label reveal" data-en="Work" data-ar="الأعمال">Work</p>
+      <h2 class="section-h2 reveal" data-en="Featured Projects" data-ar="المشاريع المميزة">Featured Projects</h2>
+      <p class="section-sub reveal" data-en="Real-world systems built and shipped." data-ar="أنظمة حقيقية تم بناؤها وإطلاقها.">Real-world systems built and shipped.</p>
 
       <div class="projects-list">
 
@@ -159,14 +168,16 @@
           <div class="pc-left">
             <div class="pc-num">01</div>
             <div class="pc-tags">
-              <span>Flask</span><span>React</span><span>AI</span><span>Supabase</span>
+              <span>Flask</span><span>React</span><span>LLM</span><span>PostgreSQL</span>
             </div>
           </div>
           <div class="pc-body">
-            <p class="pc-cat">AI + Web Integration</p>
-            <h3 class="pc-title">iPETRO Digital Inspection System</h3>
-            <p class="pc-desc">A web-based inspection and reporting system built for a real company in Malacca. Automates operational workflows with AI assistance, production-deployed with authentication and real-time data handling.</p>
-            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ipetro-digital-inspection-system" target="_blank" rel="noreferrer">View on GitHub</a>
+            <p class="pc-cat" data-en="AI + Full Stack" data-ar="ذكاء اصطناعي + Full Stack">AI + Full Stack</p>
+            <h3 class="pc-title">ClickCV — AI Resume Analyzer</h3>
+            <p class="pc-desc" data-en="An intelligent platform for analyzing and building resumes (FYP). Integrates advanced algorithms with Large Language Models (LLM) to evaluate resume compatibility with ATS systems, generate smart recommendations for content improvement, and includes an intelligent job search engine that matches user skills with suitable opportunities." data-ar="منصة ذكية لتحليل وبناء السير الذاتية (مشروع التخرج). تدمج خوارزميات متقدمة مع نماذج اللغة الكبيرة (LLM) لتقييم توافق السيرة الذاتية مع أنظمة ATS، وتوليد توصيات ذكية لتحسين المحتوى، وتتضمن محرك بحث وظائف ذكي يطابق مهارات المستخدم مع الفرص المناسبة.">
+              An intelligent platform for analyzing and building resumes (FYP). Integrates advanced algorithms with Large Language Models (LLM) to evaluate resume compatibility with ATS systems, generate smart recommendations for content improvement, and includes an intelligent job search engine that matches user skills with suitable opportunities.
+            </p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ClickCv" target="_blank" rel="noreferrer" data-en="View on GitHub" data-ar="عرض على GitHub">View on GitHub</a>
           </div>
         </article>
 
@@ -174,14 +185,16 @@
           <div class="pc-left">
             <div class="pc-num">02</div>
             <div class="pc-tags">
-              <span>C++</span><span>MySQL</span><span>OOP</span>
+              <span>Flask</span><span>Next.js</span><span>AI Agent</span><span>PostgreSQL</span>
             </div>
           </div>
           <div class="pc-body">
-            <p class="pc-cat">Systems & Performance</p>
-            <h3 class="pc-title">Melaka Property Management System</h3>
-            <p class="pc-desc">A full property management system in C++ with MySQL storage. Handles property records, tenant management, and operational data with clean OOP architecture and efficient data structures.</p>
-            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/Melaka-property-management-system---C-" target="_blank" rel="noreferrer">View on GitHub</a>
+            <p class="pc-cat" data-en="FinTech + AI" data-ar="التقنية المالية + ذكاء اصطناعي">FinTech + AI</p>
+            <h3 class="pc-title">Manarah — Smart Financial Management</h3>
+            <p class="pc-desc" data-en="Intelligent personal financial management system built during Salamhack hackathon (3 days). Led a technical team to develop an AI financial advisor compatible with Islamic Sharia, automated expense tracking and smart savings that automatically allocates funds based on financial goals, plus automatic Zakat calculation and halal investment suggestions." data-ar="نظام ذكي للإدارة المالية الشخصية تم تطويره خلال هاكاثون Salamhack (3 أيام). قيادة فريق تقني لتطوير مستشار مالي ذكي متوافق مع الشريعة الإسلامية، أتمتة المصروفات ومدخرات ذكية تخصص الأموال تلقائياً بناءً على الأهداف المالية، بالإضافة إلى حساب الزكاة آلياً واقتراح استثمارات حلال.">
+              Intelligent personal financial management system built during Salamhack hackathon (3 days). Led a technical team to develop an AI financial advisor compatible with Islamic Sharia, automated expense tracking and smart savings that automatically allocates funds based on financial goals, plus automatic Zakat calculation and halal investment suggestions.
+            </p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/Manarah" target="_blank" rel="noreferrer" data-en="View on GitHub" data-ar="عرض على GitHub">View on GitHub</a>
           </div>
         </article>
 
@@ -189,14 +202,16 @@
           <div class="pc-left">
             <div class="pc-num">03</div>
             <div class="pc-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              <span>Flask</span><span>JavaScript</span><span>Supabase</span>
             </div>
           </div>
           <div class="pc-body">
-            <p class="pc-cat">E-Commerce</p>
-            <h3 class="pc-title">Dyscover Game Hub</h3>
-            <p class="pc-desc">An e-commerce platform for buying and selling games online. Features product listings, cart functionality, user interactions, and a fully responsive UI designed for seamless browsing across devices.</p>
-            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/dyscover-game-hub" target="_blank" rel="noreferrer">View on GitHub</a>
+            <p class="pc-cat" data-en="Automation + Web" data-ar="أتمتة + ويب">Automation + Web</p>
+            <h3 class="pc-title">iPetro Digital Inspection System</h3>
+            <p class="pc-desc" data-en="A web-based inspection and reporting system built for iPetro company in Malacca. Automates technical and administrative report creation for equipment, improving efficiency and reducing report preparation time from hours to minutes. Features interactive interfaces easy for non-technical employees to use and production-deployed with authentication." data-ar="نظام ويب للفحص وإنشاء التقارير بُني لشركة iPetro في مالاكا. يُؤتمت عملية إنشاء التقارير الفنية والإدارية للمعدات، مما يحسّن الكفاءة ويقلل وقت إعداد التقارير من ساعات إلى دقائق. يتميز بواجهات تفاعلية سهلة الاستخدام للموظفين غير التقنيين ومُنشر في بيئة الإنتاج مع المصادقة.">
+              A web-based inspection and reporting system built for iPetro company in Malacca. Automates technical and administrative report creation for equipment, improving efficiency and reducing report preparation time from hours to minutes. Features interactive interfaces easy for non-technical employees to use and production-deployed with authentication.
+            </p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ipetro-digital-inspection-system" target="_blank" rel="noreferrer" data-en="View on GitHub" data-ar="عرض على GitHub">View on GitHub</a>
           </div>
         </article>
 
@@ -204,14 +219,33 @@
           <div class="pc-left">
             <div class="pc-num">04</div>
             <div class="pc-tags">
-              <span>AI</span><span>HTML</span><span>Resume</span>
+              <span>FastAPI</span><span>Web Scraping</span><span>WhatsApp API</span><span>Telegram</span>
             </div>
           </div>
           <div class="pc-body">
-            <p class="pc-cat">AI Tool</p>
-            <h3 class="pc-title">ClickCV — AI Resume Analyzer</h3>
-            <p class="pc-desc">An AI-powered resume analysis and optimization platform. Analyzes CVs for ATS compatibility, suggests targeted improvements, and helps candidates present their experience more effectively to recruiters.</p>
-            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ClickCv" target="_blank" rel="noreferrer">View on GitHub</a>
+            <p class="pc-cat" data-en="Automation + Integration" data-ar="أتمتة + تكامل">Automation + Integration</p>
+            <h3 class="pc-title">ARROW — Smart LMS Assistant</h3>
+            <p class="pc-desc" data-en="Intelligent integration system connecting university LMS with messaging apps. Built smart notification system that sends automatic alerts to students via WhatsApp and Telegram for exams and important dates. Implements web scraping techniques to extract academic data from university website automatically, and includes an intelligent chatbot that answers student queries by fetching data directly from the university platform." data-ar="نظام تكامل ذكي يربط نظام إدارة التعلم الجامعي (LMS) مع تطبيقات المراسلة. بناء نظام إشعارات ذكي يرسل تنبيهات تلقائية للطلاب عبر WhatsApp و Telegram للامتحانات والمواعيد المهمة. تطبيق تقنيات Web Scraping لاستخراج البيانات الأكاديمية من الموقع الجامعي آلياً، ويتضمن chatbot ذكي يجيب على استفسارات الطلاب من خلال جلب البيانات مباشرة من المنصة الجامعية.">
+              Intelligent integration system connecting university LMS with messaging apps. Built smart notification system that sends automatic alerts to students via WhatsApp and Telegram for exams and important dates. Implements web scraping techniques to extract academic data from university website automatically, and includes an intelligent chatbot that answers student queries by fetching data directly from the university platform.
+            </p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/ARROW" target="_blank" rel="noreferrer" data-en="View on GitHub" data-ar="عرض على GitHub">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="pc-left">
+            <div class="pc-num">05</div>
+            <div class="pc-tags">
+              <span>C++</span><span>MySQL</span><span>OOP</span>
+            </div>
+          </div>
+          <div class="pc-body">
+            <p class="pc-cat" data-en="Systems Programming" data-ar="برمجة الأنظمة">Systems Programming</p>
+            <h3 class="pc-title">Melaka Property Management System</h3>
+            <p class="pc-desc" data-en="A comprehensive property management system in C++ with MySQL storage. Handles property records, tenant management, and operational data with clean OOP architecture and efficient data structures." data-ar="نظام إدارة عقارات شامل بلغة C++ مع تخزين MySQL. يتعامل مع سجلات العقارات وإدارة المستأجرين والبيانات التشغيلية ببنية OOP نظيفة وهياكل بيانات فعالة.">
+              A comprehensive property management system in C++ with MySQL storage. Handles property records, tenant management, and operational data with clean OOP architecture and efficient data structures.
+            </p>
+            <a class="btn btn-primary btn-sm" href="https://github.com/a7aml/Melaka-property-management-system---C-" target="_blank" rel="noreferrer" data-en="View on GitHub" data-ar="عرض على GitHub">View on GitHub</a>
           </div>
         </article>
 
@@ -220,45 +254,48 @@
 
     <!-- SKILLS -->
     <section id="skills" class="section">
-      <p class="section-label reveal">Stack</p>
-      <h2 class="section-h2 reveal">Skills</h2>
+      <p class="section-label reveal" data-en="Stack" data-ar="التقنيات">Stack</p>
+      <h2 class="section-h2 reveal" data-en="Skills" data-ar="المهارات">Skills</h2>
       <div class="skills-grid">
         <div class="skill-col reveal">
-          <div class="skill-col-head">Backend</div>
+          <div class="skill-col-head" data-en="Backend" data-ar="الخلفية">Backend</div>
           <ul class="skill-list">
-            <li><div class="sk-row"><span>Flask</span><span class="sk-pct">92%</span></div><div class="sk-track"><div class="sk-bar" style="--w:92%"></div></div></li>
-            <li><div class="sk-row"><span>REST APIs</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
-            <li><div class="sk-row"><span>Auth — JWT / Sessions</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
-            <li><div class="sk-row"><span>SQL / PostgreSQL</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-bar" style="--w:78%"></div></div></li>
-            <li><div class="sk-row"><span>Docker</span><span class="sk-pct">65%</span></div><div class="sk-track"><div class="sk-bar" style="--w:65%"></div></div></li>
+            <li><div class="sk-row"><span>Python</span><span class="sk-pct">92%</span></div><div class="sk-track"><div class="sk-bar" style="--w:92%"></div></div></li>
+            <li><div class="sk-row"><span>Flask</span><span class="sk-pct">90%</span></div><div class="sk-track"><div class="sk-bar" style="--w:90%"></div></div></li>
+            <li><div class="sk-row"><span>FastAPI</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
+            <li><div class="sk-row"><span>Node.js</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-bar" style="--w:75%"></div></div></li>
+            <li><div class="sk-row"><span>RESTful APIs</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
+            <li><div class="sk-row"><span>JWT / Sessions</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
           </ul>
         </div>
         <div class="skill-col reveal">
-          <div class="skill-col-head">AI / ML</div>
+          <div class="skill-col-head" data-en="AI / ML" data-ar="ذكاء اصطناعي">AI / ML</div>
           <ul class="skill-list">
-            <li><div class="sk-row"><span>Fine-tuning LLMs</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+            <li><div class="sk-row"><span>Large Language Models</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+            <li><div class="sk-row"><span>AI Agents</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-bar" style="--w:82%"></div></div></li>
+            <li><div class="sk-row"><span>Pre-trained Models</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-bar" style="--w:78%"></div></div></li>
             <li><div class="sk-row"><span>Model Integration</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-bar" style="--w:82%"></div></div></li>
-            <li><div class="sk-row"><span>Hugging Face</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-bar" style="--w:78%"></div></div></li>
-            <li><div class="sk-row"><span>Inference Pipelines</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-bar" style="--w:75%"></div></div></li>
             <li><div class="sk-row"><span>LLM APIs</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
           </ul>
         </div>
         <div class="skill-col reveal">
-          <div class="skill-col-head">Frontend</div>
+          <div class="skill-col-head" data-en="Database & DevOps" data-ar="قواعد البيانات">Database & DevOps</div>
           <ul class="skill-list">
-            <li><div class="sk-row"><span>HTML / CSS / JS</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
-            <li><div class="sk-row"><span>React</span><span class="sk-pct">72%</span></div><div class="sk-track"><div class="sk-bar" style="--w:72%"></div></div></li>
-            <li><div class="sk-row"><span>Responsive UI</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-bar" style="--w:80%"></div></div></li>
-            <li><div class="sk-row"><span>Animations</span><span class="sk-pct">74%</span></div><div class="sk-track"><div class="sk-bar" style="--w:74%"></div></div></li>
+            <li><div class="sk-row"><span>PostgreSQL</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+            <li><div class="sk-row"><span>MongoDB</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-bar" style="--w:75%"></div></div></li>
+            <li><div class="sk-row"><span>Database Design</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-bar" style="--w:82%"></div></div></li>
+            <li><div class="sk-row"><span>Docker</span><span class="sk-pct">70%</span></div><div class="sk-track"><div class="sk-bar" style="--w:70%"></div></div></li>
+            <li><div class="sk-row"><span>Git / GitHub</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
           </ul>
         </div>
         <div class="skill-col reveal">
-          <div class="skill-col-head">Systems</div>
+          <div class="skill-col-head" data-en="Frontend & Other" data-ar="الواجهات">Frontend & Other</div>
           <ul class="skill-list">
-            <li><div class="sk-row"><span>C++</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
-            <li><div class="sk-row"><span>Java</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-bar" style="--w:75%"></div></div></li>
-            <li><div class="sk-row"><span>Data Structures</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-bar" style="--w:82%"></div></div></li>
-            <li><div class="sk-row"><span>System Design</span><span class="sk-pct">70%</span></div><div class="sk-track"><div class="sk-bar" style="--w:70%"></div></div></li>
+            <li><div class="sk-row"><span>React.js / Next.js</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-bar" style="--w:75%"></div></div></li>
+            <li><div class="sk-row"><span>JavaScript / TypeScript</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-bar" style="--w:82%"></div></div></li>
+            <li><div class="sk-row"><span>HTML5 / CSS3</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-bar" style="--w:88%"></div></div></li>
+            <li><div class="sk-row"><span>C++ / Java</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-bar" style="--w:85%"></div></div></li>
+            <li><div class="sk-row"><span>System Design</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-bar" style="--w:78%"></div></div></li>
           </ul>
         </div>
       </div>
@@ -266,13 +303,18 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <p class="section-label reveal">Contact</p>
+      <p class="section-label reveal" data-en="Contact" data-ar="التواصل">Contact</p>
       <div class="contact-wrap reveal">
-        <h2 class="section-h2">Let's build<br><em>something together.</em></h2>
-        <p class="section-sub">Open to full-time roles, freelance projects, and interesting collaborations.</p>
+        <h2 class="section-h2">
+          <span data-en="Let's build" data-ar="لنبني">Let's build</span><br>
+          <em data-en="something together." data-ar="شيئاً معاً.">something together.</em>
+        </h2>
+        <p class="section-sub" data-en="Open to full-time roles, freelance projects, and interesting collaborations." data-ar="متاح للوظائف بدوام كامل، المشاريع المستقلة، والتعاونات الممتعة.">
+          Open to full-time roles, freelance projects, and interesting collaborations.
+        </p>
         <div class="contact-links">
           <a href="mailto:ahmedgamej@gmail.com" class="contact-item">
-            <span class="ci-label">Email</span>
+            <span class="ci-label" data-en="Email" data-ar="البريد">Email</span>
             <span class="ci-value">ahmedgamej@gmail.com</span>
             <span class="ci-arrow">→</span>
           </a>
@@ -292,7 +334,7 @@
 
     <footer class="footer">
       <span>© <span id="year"></span> Ahmed Gamel</span>
-      <span>Built with HTML / CSS / JS</span>
+      <span data-en="Built with HTML / CSS / JS" data-ar="مبني بـ HTML / CSS / JS">Built with HTML / CSS / JS</span>
     </footer>
   </main>
 
